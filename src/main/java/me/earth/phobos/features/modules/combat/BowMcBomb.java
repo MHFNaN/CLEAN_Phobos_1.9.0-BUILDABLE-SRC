@@ -1,6 +1,6 @@
 //credits: bjottt
 
-package me.earth.phobos.features.modules.cul;
+package me.earth.phobos.features.modules.combat;
 
 import me.earth.phobos.Phobos;
 import me.earth.phobos.event.events.PacketEvent;
