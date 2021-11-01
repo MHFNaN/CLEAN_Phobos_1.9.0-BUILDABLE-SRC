@@ -14,12 +14,12 @@ public class ClickGui
         extends Module {
     private static ClickGui INSTANCE = new ClickGui();
     public Setting<Boolean> colorSync = this.register(new Setting<Boolean>("Sync", false));
-    public Setting<Boolean> outline = this.register(new Setting<Boolean>("Outline", false));
+    public Setting<Boolean> outline = this.register(new Setting<Boolean>("Outline", true));
     public Setting<Boolean> rainbowRolling = this.register(new Setting<Object>("RollingRainbow", Boolean.valueOf(false), v -> this.colorSync.getValue() != false && Colors.INSTANCE.rainbow.getValue() != false));
-    public Setting<String> prefix = this.register(new Setting<String>("Prefix", ".").setRenderName(true));
+    public Setting<String> prefix = this.register(new Setting<String>("Prefix", "++").setRenderName(true));
     public Setting<Integer> red = this.register(new Setting<Integer>("Red", 255, 0, 255));
-    public Setting<Integer> green = this.register(new Setting<Integer>("Green", 0, 0, 255));
-    public Setting<Integer> blue = this.register(new Setting<Integer>("Blue", 0, 0, 255));
+    public Setting<Integer> green = this.register(new Setting<Integer>("Green", 255, 0, 255));
+    public Setting<Integer> blue = this.register(new Setting<Integer>("Blue", 255, 0, 255));
     public Setting<Integer> hoverAlpha = this.register(new Setting<Integer>("Alpha", 180, 0, 255));
     public Setting<Integer> alpha = this.register(new Setting<Integer>("HoverAlpha", 240, 0, 255));
     public Setting<Boolean> customFov = this.register(new Setting<Boolean>("CustomFov", false));
@@ -28,11 +28,11 @@ public class ClickGui
     public Setting<String> open = this.register(new Setting<Object>("Open:", "", v -> this.openCloseChange.getValue()).setRenderName(true));
     public Setting<String> close = this.register(new Setting<Object>("Close:", "", v -> this.openCloseChange.getValue()).setRenderName(true));
     public Setting<String> moduleButton = this.register(new Setting<Object>("Buttons:", "", v -> this.openCloseChange.getValue() == false).setRenderName(true));
-    public Setting<Boolean> devSettings = this.register(new Setting<Boolean>("DevSettings", false));
+    public Setting<Boolean> devSettings = this.register(new Setting<Boolean>("DevSettings", true));
     public Setting<Integer> topRed = this.register(new Setting<Object>("TopRed", Integer.valueOf(255), Integer.valueOf(0), Integer.valueOf(255), v -> this.devSettings.getValue()));
-    public Setting<Integer> topGreen = this.register(new Setting<Object>("TopGreen", Integer.valueOf(0), Integer.valueOf(0), Integer.valueOf(255), v -> this.devSettings.getValue()));
-    public Setting<Integer> topBlue = this.register(new Setting<Object>("TopBlue", Integer.valueOf(0), Integer.valueOf(0), Integer.valueOf(255), v -> this.devSettings.getValue()));
-    public Setting<Integer> topAlpha = this.register(new Setting<Object>("TopAlpha", Integer.valueOf(255), Integer.valueOf(0), Integer.valueOf(255), v -> this.devSettings.getValue()));
+    public Setting<Integer> topGreen = this.register(new Setting<Object>("TopGreen", Integer.valueOf(255), Integer.valueOf(0), Integer.valueOf(255), v -> this.devSettings.getValue()));
+    public Setting<Integer> topBlue = this.register(new Setting<Object>("TopBlue", Integer.valueOf(255), Integer.valueOf(0), Integer.valueOf(255), v -> this.devSettings.getValue()));
+    public Setting<Integer> topAlpha = this.register(new Setting<Object>("TopAlpha", Integer.valueOf(180), Integer.valueOf(0), Integer.valueOf(255), v -> this.devSettings.getValue()));
 
     public ClickGui() {
         super("ClickGui", "Opens the ClickGui", Module.Category.CLIENT, true, false, false);
