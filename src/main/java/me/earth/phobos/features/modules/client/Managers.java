@@ -11,12 +11,12 @@ public class Managers
         extends Module {
     private static Managers INSTANCE = new Managers();
     public Setting<Boolean> betterFrames = this.register(new Setting<Boolean>("BetterMaxFPS", false));
-    public Setting<String> commandBracket = this.register(new Setting<String>("Bracket", "<"));
-    public Setting<String> commandBracket2 = this.register(new Setting<String>("Bracket2", ">"));
-    public Setting<String> command = this.register(new Setting<String>("Command", "Phobos.eu"));
-    public Setting<Boolean> rainbowPrefix = this.register(new Setting<Boolean>("RainbowPrefix", false));
-    public Setting<TextUtil.Color> bracketColor = this.register(new Setting<TextUtil.Color>("BColor", TextUtil.Color.BLUE));
-    public Setting<TextUtil.Color> commandColor = this.register(new Setting<TextUtil.Color>("CColor", TextUtil.Color.BLUE));
+    public Setting<String> commandBracket = this.register(new Setting<String>("Bracket", "("));
+    public Setting<String> commandBracket2 = this.register(new Setting<String>("Bracket2", ")"));
+    public Setting<String> command = this.register(new Setting<String>("Command", "SimpHack"));
+    public Setting<Boolean> rainbowPrefix = this.register(new Setting<Boolean>("RainbowPrefix", true));
+    public Setting<TextUtil.Color> bracketColor = this.register(new Setting<TextUtil.Color>("BColor", TextUtil.Color.PURPLE));
+    public Setting<TextUtil.Color> commandColor = this.register(new Setting<TextUtil.Color>("CColor", TextUtil.Color.PURPLE));
     public Setting<Integer> betterFPS = this.register(new Setting<Object>("MaxFPS", Integer.valueOf(300), Integer.valueOf(30), Integer.valueOf(1000), v -> this.betterFrames.getValue()));
     public Setting<Boolean> potions = this.register(new Setting<Boolean>("Potions", true));
     public Setting<Integer> textRadarUpdates = this.register(new Setting<Integer>("TRUpdates", 500, 0, 1000));
