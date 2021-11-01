@@ -63,22 +63,22 @@ public class StorageESP
 
     private int getTileEntityColor(TileEntity tileEntity) {
         if (tileEntity instanceof TileEntityChest) {
-            return ColorUtil.Colors.BLUE;
+            return ColorUtil.Colors.PURPLE;
         }
         if (tileEntity instanceof TileEntityShulkerBox) {
-            return ColorUtil.Colors.RED;
+            return ColorUtil.Colors.PURPLE;
         }
         if (tileEntity instanceof TileEntityEnderChest) {
             return ColorUtil.Colors.PURPLE;
         }
         if (tileEntity instanceof TileEntityFurnace) {
-            return ColorUtil.Colors.GRAY;
+            return ColorUtil.Colors.PURPLE;
         }
         if (tileEntity instanceof TileEntityHopper) {
-            return ColorUtil.Colors.DARK_RED;
+            return ColorUtil.Colors.PURPLE;
         }
         if (tileEntity instanceof TileEntityDispenser) {
-            return ColorUtil.Colors.ORANGE;
+            return ColorUtil.Colors.PURPLE;
         }
         return -1;
     }
