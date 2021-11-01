@@ -13,17 +13,17 @@ public class FontMod
         extends Module {
     private static FontMod INSTANCE = new FontMod();
     public Setting<String> fontName = this.register(new Setting<String>("FontName", "Arial", "Name of the font."));
-    public Setting<Integer> fontSize = this.register(new Setting<Integer>("FontSize", Integer.valueOf(18), "Size of the font."));
+    public Setting<Integer> fontSize = this.register(new Setting<Integer>("FontSize", Integer.valueOf(19), "Size of the font."));
     public Setting<Integer> fontStyle = this.register(new Setting<Integer>("FontStyle", Integer.valueOf(0), "Style of the font."));
     public Setting<Boolean> antiAlias = this.register(new Setting<Boolean>("AntiAlias", Boolean.valueOf(true), "Smoother font."));
     public Setting<Boolean> fractionalMetrics = this.register(new Setting<Boolean>("Metrics", Boolean.valueOf(true), "Thinner font."));
     public Setting<Boolean> shadow = this.register(new Setting<Boolean>("Shadow", Boolean.valueOf(true), "Less shadow offset font."));
     public Setting<Boolean> showFonts = this.register(new Setting<Boolean>("Fonts", Boolean.valueOf(false), "Shows all fonts."));
-    public Setting<Boolean> full = this.register(new Setting<Boolean>("Full", false));
+    public Setting<Boolean> full = this.register(new Setting<Boolean>("Full", true));
     private boolean reloadFont = false;
 
     public FontMod() {
-        super("CustomFont", "CustomFont for all of the clients text. Use the font command.", Module.Category.CLIENT, true, false, false);
+        super("CustomFont", "CustomFont for all of the clients text. Use the font command.", Module.Category.CLIENT, true, false, true);
         this.setInstance();
     }
 
