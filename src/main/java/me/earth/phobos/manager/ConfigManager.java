@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 public class ConfigManager
         implements Util {
     public ArrayList<Feature> features = new ArrayList();
-    public String config = "phobos/config/";
+    public String config = "simps/config/";
     public boolean loadingConfig;
     public boolean savingConfig;
 
@@ -103,7 +103,7 @@ public class ConfigManager
     public void loadConfig(String name) {
         this.loadingConfig = true;
         final List<File> files = Arrays.stream(Objects.requireNonNull(new File("phobos").listFiles())).filter(File::isDirectory).collect(Collectors.toList());
-        this.config = files.contains(new File("phobos/" + name + "/")) ? "phobos/" + name + "/" : "phobos/config/";
+        this.config = files.contains(new File("simps/" + name + "/")) ? "simps/" + name + "/" : "simps/config/";
         Phobos.friendManager.onLoad();
         for (Feature feature : this.features) {
             try {
@@ -118,7 +118,7 @@ public class ConfigManager
 
     public void saveConfig(String name) {
         this.savingConfig = true;
-        this.config = "phobos/" + name + "/";
+        this.config = "simps/" + name + "/";
         File path = new File(this.config);
         if (!path.exists()) {
             path.mkdir();
@@ -136,18 +136,18 @@ public class ConfigManager
     }
 
     public void saveCurrentConfig() {
-        File currentConfig = new File("phobos/currentconfig.txt");
+        File currentConfig = new File("simps/currentconfig.txt");
         try {
             if (currentConfig.exists()) {
                 FileWriter writer = new FileWriter(currentConfig);
                 String tempConfig = this.config.replaceAll("/", "");
-                writer.write(tempConfig.replaceAll("phobos", ""));
+                writer.write(tempConfig.replaceAll("simps", ""));
                 writer.close();
             } else {
                 currentConfig.createNewFile();
                 FileWriter writer = new FileWriter(currentConfig);
                 String tempConfig = this.config.replaceAll("/", "");
-                writer.write(tempConfig.replaceAll("phobos", ""));
+                writer.write(tempConfig.replaceAll("simps", ""));
                 writer.close();
             }
         } catch (Exception e) {
@@ -156,7 +156,7 @@ public class ConfigManager
     }
 
     public String loadCurrentConfig() {
-        File currentConfig = new File("phobos/currentconfig.txt");
+        File currentConfig = new File("simps/currentconfig.txt");
         String name = "config";
         try {
             if (currentConfig.exists()) {
