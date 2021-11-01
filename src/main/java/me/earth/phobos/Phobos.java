@@ -13,11 +13,11 @@ import org.lwjgl.opengl.Display;
 
 import java.io.IOException;
 
-@Mod(modid = "phobos", name = "Phobos", version = "1.9.0")
+@Mod(modid = "SimpClient", name = "SimpClient", version = "6.9.0")
 public class Phobos {
-    public static final String MODID = "phobos";
-    public static final String MODNAME = "Phobos";
-    public static final String MODVER = "1.9.0";
+    public static final String MODID = "SimpClient";
+    public static final String MODNAME = "SimpClient";
+    public static final String MODVER = "6.9.0";
     public static final String NAME_UNICODE = "3\u1d00\u0280\u1d1b\u029c\u029c4\u1d04\u1d0b";
     public static final String PHOBOS_UNICODE = "\u1d18\u029c\u1d0f\u0299\u1d0f\ua731";
     public static final String CHAT_SUFFIX = " \u23d0 3\u1d00\u0280\u1d1b\u029c\u029c4\u1d04\u1d0b";
@@ -57,7 +57,7 @@ public class Phobos {
     }
 
     public static void load() {
-        LOGGER.info("\n\nLoading 3arthh4ck 1.9.0");
+        LOGGER.info("\n\ne");
         unloaded = false;
         if (reloadManager != null) {
             reloadManager.unload();
@@ -85,7 +85,7 @@ public class Phobos {
         notificationManager = new NotificationManager();
         safetyManager = new SafetyManager();
         waypointManager = new WaypointManager();
-        LOGGER.info("Initialized Managers");
+        LOGGER.info("a");
         moduleManager.init();
         LOGGER.info("Modules loaded.");
         configManager.init();
@@ -148,7 +148,7 @@ public class Phobos {
             }
             eventManager.onUnload();
             moduleManager.onUnload();
-            configManager.saveConfig(Phobos.configManager.config.replaceFirst("phobos/", ""));
+            configManager.saveConfig(Phobos.configManager.config.replaceFirst("Simps/", ""));
             moduleManager.onUnloadPost();
             timerManager.unload();
             unloaded = true;
@@ -166,7 +166,7 @@ public class Phobos {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         customMainScreen = new GuiCustomMainScreen();
-        Display.setTitle("3arthh4ck - v.1.9.0");
+        Display.setTitle("SimpHack V69");
         Phobos.load();
     }
 }
