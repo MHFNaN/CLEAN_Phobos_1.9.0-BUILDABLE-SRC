@@ -182,10 +182,6 @@ public class Module
 
     public enum Category {
         COMBAT("Combat"),
-        MISC("Misc"),
-        RENDER("Render"),
-        MOVEMENT("Movement"),
-        PLAYER("Player"),
         CLIENT("Client");
 
         private final String name;
