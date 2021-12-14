@@ -1,5 +1,5 @@
-# BowBombOnly client revidsed
-Buildable src reconstructed from the clean Phobos 1.9.0 jar. Full buildable and functional, jar in releases is built from this clean src. 
+# BowBombOnly client revised
+Buildable src reconstructed from the clean Phobos 1.9.0 jar, Only bowbomb and 'client' tab added back
 
 
 Fixed as some shitasses cant fucking code
