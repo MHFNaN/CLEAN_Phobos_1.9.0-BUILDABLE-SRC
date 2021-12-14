@@ -181,7 +181,6 @@ public class Module
     }
 
     public enum Category {
-        COMBAT("Combat"),
         CUL("Cul"),
         CLIENT("Client");
 
